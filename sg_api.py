@@ -32,7 +32,7 @@ class MyTask:
         project_data = self.sg.find_one("Project", filters, ['id', 'name'])
 
         if not project_data:
-            raise ValueError(f" {project}  없어여")
+            raise ValueError(f" No{project}  ")
 
         return project_data['id']
 
@@ -50,7 +50,7 @@ class MyTask:
         print(f"tasks in get tasks : {tasks}")
         
         if not tasks:
-            raise ValueError(" 태스크 없어여")
+            raise ValueError(" No Task")
         
         return tasks
 
@@ -126,8 +126,6 @@ class SGPublisher:
       def __init__(self,pub_dict):
             """ShotGrid 퍼블리시를 처리하는 클래스"""
 
-            print("예나의 고생끝 sg publisher 시작하것습ㅈ니다. 끝내주는 코드 시작~~!!@")
-
             if pub_dict is None:
                   raise ValueError("Error: SGPublisher에 전달된 pub_dict가 None입니다.")
             if 'pub_files' not in pub_dict:
@@ -164,7 +162,7 @@ class SGPublisher:
             if pub_dict['pub_files']['pub_maya']:
                   print(f"got publish dictionary : {pub_dict}")
             else:
-                  print("없더여")
+                  print("No Data")
 
             maya_file = self.parse_file_path(pub_dict['pub_files']['pub_maya'])
             
