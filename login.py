@@ -30,7 +30,7 @@ class Login_UI:
 
     def __init__(self):
         """로그인 후 로더 UI를 띄울 수 있게 하는 클래스"""
-        print("연결이~~~ 됐습니다~~~!!!!~!~@@!~!@")
+        
         init_sg = Singleton_SG()
         self.sg = init_sg.sg
 
@@ -108,7 +108,6 @@ class Login_UI:
             print('json 생성됨')
             print(user_dict)
 
-        print('sg_api에 보냇서여')
 
 
     def show_error_message(self):
@@ -118,7 +117,7 @@ class Login_UI:
 
     def open_main_ui(self):
         """로더 ui를 여는 함수"""
-        print(" main ui 열어보겟서여")
+        
         try:
             
             import loader
